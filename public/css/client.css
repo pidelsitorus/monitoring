@@ -1,0 +1,183 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for Header Section */
+.header {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.header h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.header form {
+    margin-top: 20px;
+}
+
+.logout-form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logout-form button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for Container Section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.identitas, .statusPeriksa {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for Identitas Section */
+.identitas {
+    border: 2px solid #4CAF50;
+    background-color: #f9f9f9;
+}
+
+.identitas h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.identitas h3 {
+    color: #333;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.identitas div {
+    border-top: 1px solid #4CAF50;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* Styling for StatusPeriksa Section */
+.statusPeriksa {
+    border: 2px solid #FF5722;
+    background-color: #fff3e0;
+}
+
+.statusPeriksa h2 {
+    color: #FF5722;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.statusPeriksa h3 {
+    color: #333;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.statusPeriksa div {
+    border-top: 1px solid #FF5722;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* Styling for StatusSensor Section */
+.statusSensor {
+    border: 2px solid #2196F3;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #E3F2FD;
+    font-family: Arial, sans-serif;
+}
+
+.statusSensor h2 {
+    color: #2196F3;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 10px;
+}
+
+.sensorGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sensorInfo {
+    padding: 15px;
+    border: 1px solid #BBDEFB;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.sensorInfo h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.sensorInfo h4 {
+    color: #666;
+    font-size: 16px;
+    margin: 3px 0;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #E3F2FD; /* Biru lembut */
+    color: #333; /* Warna teks abu-abu gelap */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 3px solid #4CAF50; /* Garis hijau */
+    width: 100%; /* Pastikan footer melebar penuh */
+    margin: 0; /* Hilangkan margin */
+}
+
+.footer-left h3 {
+    color: #4CAF50; /* Hijau untuk nama perusahaan */
+    font-size: 24px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #BBDEFB; /* Garis biru lembut */
+    padding-top: 10px;
+    color: #333;
+}

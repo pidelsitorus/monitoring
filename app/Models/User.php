@@ -2,44 +2,37 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['email', 'password', 'role_id'];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    // Relasi dengan Role (One-to-One)
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+
+    // Relasi dengan Pasien (One-to-One)
+    public function pasien()
+    {
+        return $this->hasOne(Pasien::class);
+    }
+
+    // Relasi dengan Dokter (One-to-One)
+    public function dokter()
+    {
+        return $this->hasOne(Dokter::class);
+    }
+
+    // Relasi dengan Admin (One-to-One)
+    public function admin()
+    {
+        return $this->hasOne(Admin::class);
+    }
 }
